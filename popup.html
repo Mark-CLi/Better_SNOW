@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body, input, button, .popup-menu a {
+            font-family: 'Noto Sans', sans-serif; /* Clean and modern font */
+        }
+
+        #searchQuery {
+            width: 97%;
+            height: 35px;
+            font-size: 1.5em;
+            padding: 12px;
+            border: 2.5px solid #C99700; /* Solid border with a bright color */
+            border-radius: 5px; /* Slightly rounded corners for a soft look */
+            outline: none; /* Remove default focus outline */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+
+        #searchQuery:focus {
+            border-color: #0056b3; /* Change border color on focus */
+        }
+
+        /* Styling for the popup menu using flat design */
+        .popup-menu {
+            display: none;
+            background-color: #ffffff;
+            border: 1px solid #ddd; /* Lighter border for a flat look */
+            width: 200px;
+            padding: 12px 16px;
+            position: absolute;
+            z-index: 1;
+            border-radius: 5px; /* Consistent rounded corners */
+            box-shadow: none; /* No shadow for a flat design */
+        }
+
+        /* Flat design for menu items */
+        .popup-menu a {
+            color: #007BFF; /* Bright color links */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.2s, transform 0.2s; /* Adding transform animation */
+        }
+
+        /* Animation and hover effect */
+        .popup-menu a:hover {
+            background-color: #f0f0f0;
+            transform: translateX(10px); /* Slide to the right on hover */
+        }
+
+        body {
+            width: 700px;
+            height: 500px;
+            font-size: 1.5em;
+            margin: 0;
+            padding: 0;
+            background: #fafafa; /* Light background for a clean look */
+        }
+
+        #searchForm {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 5px;
+            border: none;
+            background-color: #812162;;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #A32200;
+        }
+
+        .entry {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .entry:hover {
+            background-color: #f0f0f0;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .message {
+            font-size: 0.7em;
+        }
+
+        body.dark-mode {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode #searchQuery {
+            background: #333;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        body.dark-mode .entry:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .animation-enabled .entry {
+            animation: slideInFromRight 0.5s ease-out;
+        }
+
+        .animation-enabled .entry:nth-child(1) {
+            animation-delay: 0.01s;
+        }
+
+        .animation-enabled .entry:nth-child(2) {
+            animation-delay: 0.02s;
+        }
+
+        .animation-enabled .entry:nth-child(3) {
+            animation-delay: 0.03s;
+        }
+
+        .animation-enabled .entry:nth-child(4) {
+            animation-delay: 0.04s;
+        }
+
+        .animation-enabled .entry:nth-child(5) {
+            animation-delay: 0.05s;
+        }
+
+        .animation-enabled .entry:nth-child(6) {
+            animation-delay: 0.06s;
+        }
+
+        .animation-enabled .entry:nth-child(7) {
+            animation-delay: 0.07s;
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<form id="searchForm">
+    <input type="text" id="searchQuery" autofocus placeholder="Search..." />
+</form>
+<div id="searchResults"></div>
+<Button id="SettingsButton">Settings</Button>
+<button id="aboutButton">About</button>
+<div id="popup-menu" class="popup-menu">
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+</div>
+<script src="popup.js"></script>
+<script src="darkmode.js"></script>
+</body>
+</html>
