@@ -25,7 +25,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     } else if (info.menuItemId.startsWith('responseEntry_')) {
         const index = parseInt(info.menuItemId.replace('responseEntry_', ''), 10);
 
-        fetch(chrome.runtime.getURL('File.json'))
+        fetch(chrome.runtime.getURL('File.json')) // TODO: Change this
             .then(response => response.text())
             .then(data => {
                 const entries = data.split('[space]').filter(entry => entry.trim().length > 0);

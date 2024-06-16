@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
     searchQueryInput.addEventListener('input', performSearch);
 
     // Add click event listener to the About button
-    aboutButton.addEventListener('click', () => {
-        alert('Better SNOW by Mark, MIT License');
+    document.getElementById('aboutButton').addEventListener('click', function() {
+        window.location.href = 'about.html';
     });
 
     var settingsButton = document.getElementById('SettingsButton');

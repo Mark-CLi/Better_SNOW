@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, input, button, .popup-menu a {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#searchQuery {
+    margin-top: 0.5%;
+    width: 95%;
+    height: 35px;
+    font-size: 1.5em;
+    padding: 12px;
+    border: 2.5px solid lightyellow; /* Solid border w*/
+    border-radius: 5px; /* rounde */
+    outline: none; /* focus outline */
+    transition: border-color 0.3s;
+    margin-left: 0.5%;
+}
+
+#searchQuery:focus {
+    border-color: #0056b3; /* Change border color on focus */
+}
+
+
+#SettingsButton, #aboutButton { /* this is for popup.html */
+    margin-left: 0.5%;
+}
+
+.settings-container {
+    width: 95%;
+    max-width: 700px;
+    height: 500px;
+    padding: 20px;
+    background: #fefefe;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+/* font size and shit heading 1 and p */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #812162;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.setting {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fafafa;
+    box-shadow: 0 2.5px 4px #292A2D;
+}
+
+body.dark-mode .setting {
+    background: #0e1117;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 5px;
+    border: none;
+    background-color: #812162;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #A32200;
+}
+
+.status-on, .status-off { /* rounded status box*/
+    padding: 0.3% 0.65%;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status-on {
+    background-color: green;
+}
+
+.status-off {
+    background-color: darkred;
+}
+
+.navigation-buttons {
+    display: block;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.popup-menu {
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    width: 200px;
+    padding: 12px 16px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#searchResults > div {
+    margin-left: 0.5%;
+    border: 1px solid #000; /* Change the color as needed */
+    padding: 5px;
+}
+
+#searchResults > div:hover {
+    background-color: #ccc;
+}
+
+body.dark-mode #searchResults > div:hover {
+    background-color: grey;
+}
+
+.entry .title {
+    font-weight: bold;
+    font-size: 1.45em;
+}
+
+.entry .message {
+    font-size: 1.15em;
+}
+
+.popup-menu a {
+    color: #007BFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.popup-menu a:hover {
+    background-color: #f0f0f0;
+    transform: translateX(10px);
+}
+
+body {
+    width: 700px;
+    height: 500px;
+    font-size: 1em;
+    background: #fafafa;
+}
+
+body.dark-mode {
+    background: #0e1117;
+    color: #ffffff;
+}
+
+body.dark-mode .settings-container {
+    background: #0e1117;
+    border: 1px solid #0e1117;
+}
+
+/* not use due to color issues */
+/*body.dark-mode button {*/
+/*    background-color: #444;*/
+/*    color: #fff;*/
+/*}*/
+
+body.dark-mode button:hover {
+    background-color: #A32200;
+    color: #ffffff;
+}
+
+body.dark-mode .status-on {
+    background-color: green;
+}
+
+body.dark-mode .status-off {
+    background-color: darkred;
+}
+
+.about-container {
+    width: 95%;
+    max-width: 700px;
+    height: 500px;
+    padding: 20px;
+    background: #fefefe;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+body.dark-mode .about-container {
+    background: #0e1117;
+    border: 1px solid #555;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animation-enabled .entry {
+    animation: slideInFromRight 0.5s ease-out;
+}
+
+.animation-enabled .entry:nth-child(1) {
+    animation-delay: 0.01s;
+}
+
+.animation-enabled .entry:nth-child(2) {
+    animation-delay: 0.02s;
+}
+
+.animation-enabled .entry:nth-child(3) {
+    animation-delay: 0.03s;
+}
+
+.animation-enabled .entry:nth-child(4) {
+    animation-delay: 0.04s;
+}
+
+.animation-enabled .entry:nth-child(5) {
+    animation-delay: 0.05s;
+}
+
+.animation-enabled .entry:nth-child(6) {
+    animation-delay: 0.06s;
+}
+
+.animation-enabled .entry:nth-child(7) {
+    animation-delay: 0.07s;
+}

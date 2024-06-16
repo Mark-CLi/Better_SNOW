@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Auto framework elements not found');
     }
 
-    // Add click event listener to the About button
-    aboutButton.addEventListener('click', () => {
-        alert('Better SNOW by Mark, MIT License');
+    // event listener to the About button
+    document.getElementById('aboutButton').addEventListener('click', function() {
+        window.location.href = 'about.html';
     });
 
     // Add click event listener to the Return to Search button
